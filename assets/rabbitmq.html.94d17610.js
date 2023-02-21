@@ -1,0 +1,16 @@
+import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";import{o as r,c as i,a as e,b as o,e as t,d as a,r as l}from"./app.71d4843f.js";var c="/img/docker/rabbitmq.png";const d={},m=t(`<h1 id="rabbitmq-docker-m1\u73AF\u5883\u90E8\u7F72" tabindex="-1"><a class="header-anchor" href="#rabbitmq-docker-m1\u73AF\u5883\u90E8\u7F72" aria-hidden="true">#</a> RabbitMQ Docker M1\u73AF\u5883\u90E8\u7F72</h1><h2 id="\u91C7\u7528docker-compose\u542F\u52A8" tabindex="-1"><a class="header-anchor" href="#\u91C7\u7528docker-compose\u542F\u52A8" aria-hidden="true">#</a> \u91C7\u7528docker-compose\u542F\u52A8</h2><p>\u65B0\u5EFAdocker-compose.yml\u6587\u4EF6\uFF0C\u590D\u5236\u4E0B\u9762\u5185\u5BB9\u5230\u6587\u4EF6\u4FDD\u5B58</p><ol><li><em>volumes</em>\u91CC\u7684\u8DEF\u5F84\u8981\u66FF\u6362\u6210\u81EA\u5DF1\u672C\u673A\u7684\u8DEF\u5F84\uFF0C\u53EF\u4EE5\u65B0\u5EFA\u4E24\u4E2A\u76EE\u5F55\u653Erabbitmq\u6587\u4EF6</li><li>\u7528\u6237\u540D\u5BC6\u7801\u53EF\u4EE5\u4FEE\u6539\u6210\u81EA\u5DF1\u7684</li></ol><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code> ~/workspace/docker/data/rabbitmq<span class="token operator">&gt;</span> <span class="token function">cat</span> docker-compose.yml
+version: <span class="token string">&#39;3.8&#39;</span>
+services:
+  rmqnamesrv:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - <span class="token string">&quot;5672:5672&quot;</span>
+      - <span class="token string">&quot;15672:15672&quot;</span>
+    environment:
+      - <span class="token assign-left variable">RABBITMQ_DEFAULT_USER</span><span class="token operator">=</span>root
+      - <span class="token assign-left variable">RABBITMQ_DEFAULT_PASS</span><span class="token operator">=</span><span class="token number">123456</span>
+    volumes:
+      - /Users/XX/workspace/docker/data/rabbitmq/data:/var/lib/rabbitmq/
+      - /Users/XX/workspace/docker/data/rabbitmq/log:/var/log/rabbitmq/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u6253\u5F00\u672C\u5730\u6D4F\u89C8\u5668\u67E5\u770B\u9875\u9762" tabindex="-1"><a class="header-anchor" href="#\u6253\u5F00\u672C\u5730\u6D4F\u89C8\u5668\u67E5\u770B\u9875\u9762" aria-hidden="true">#</a> \u6253\u5F00\u672C\u5730\u6D4F\u89C8\u5668\u67E5\u770B\u9875\u9762</h2>`,6),b={href:"http://localhost:15672",target:"_blank",rel:"noopener noreferrer"},p=a("http://localhost:15672"),v=a(),u=e("br",null,null,-1),h=a(" \u4F7F\u7528\u4E0A\u9762\u7684\u7528\u6237\u540D\u5BC6\u7801\u767B\u5F55"),_=e("p",null,[e("img",{src:c,alt:"",loading:"lazy"})],-1);function k(g,q){const n=l("ExternalLinkIcon");return r(),i("div",null,[m,e("p",null,[e("a",b,[p,o(n)]),v,u,h]),_])}var B=s(d,[["render",k],["__file","rabbitmq.html.vue"]]);export{B as default};
